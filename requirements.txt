@@ -1,0 +1,4 @@
+mlfoundry
+mlfoundry-ui
+jupyter
+pandas
