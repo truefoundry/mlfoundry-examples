@@ -1,5 +1,4 @@
 pandas 
-scipy
 numpy
 matplotlib
 scikit-learn
@@ -8,8 +7,3 @@ mlfoundry
 mlfoundry-ui
 tensorflow 
 torch
-lightgbm
-xgboost
-lime
-imblearn
-seaborn
