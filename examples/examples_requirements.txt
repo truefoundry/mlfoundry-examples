@@ -1,0 +1,15 @@
+pandas 
+scipy
+numpy
+matplotlib
+scikit-learn
+shap
+mlfoundry
+mlfoundry-ui
+tensorflow 
+torch
+lightgbm
+xgboost
+lime
+imblearn
+seaborn
