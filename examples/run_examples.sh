@@ -1,17 +1,5 @@
 #!/bin/bash
 
-examples_folder="sklearn pytorch tensorflow"
-requirements_file="examples_requirements.txt"
-
-while getopts "i" arg
-do
-    case $arg in
-        i)
-          pip install -r $requirements_file
-        ;;
-    esac
-done
-
 execute_files(){
     for file in `find . -print `
     do
@@ -30,7 +18,4 @@ execute_files(){
     done
 }
 
-for folder in $examples_folder
-do
-    execute_files $folder
-done
+execute_files
