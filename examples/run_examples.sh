@@ -13,19 +13,19 @@ do
 done
 
 execute_files(){
-    for file in `ls $1`
+    for file in `find . -print `
     do
         # if its a ipynb file convert it to py file execute it and then delete it
-        if [[ -f "$1/$file" ]]  && [ "${file##*.}" = "ipynb" ]; then
-            jupyter nbconvert --to script "$1/$file"
-            file="${file%%.*}.py"
-            echo "Executing $1/$file:";
-            time python "$1/$file"
-            rm "$1/$file"
+        if [[ -f "$file" ]]  && [ "${file##*.}" = "ipynb" ]; then
+            jupyter nbconvert --to script "$file"
+            file=`echo $file | sed -e 's/ipynb/py/g'`
+            echo "Executing $file:";
+            time python "$file"
+            rm "$file"
             
-        elif [[ -f "$1/$file" ]]  && [ "${file##*.}" = "py" ]; then
-            echo "Executing $1/$file:";
-            time python "$1/$file"
+        elif [[ -f "$file" ]]  && [ "${file##*.}" = "py" ]; then
+            echo "Executing $file:";
+            time python "$file"
         fi
     done
 }
