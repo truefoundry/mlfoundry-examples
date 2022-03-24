@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mlfoundry-examples"
+version = "0.1.0"
+description = "Examples for MLFoundry"
+authors = ["Rizwan <f.mohamedrizwan@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.10"
+mlfoundry = "^0.2.8"
+pandas = "^1.4.1"
+mlflow = "^1.24.0"
+numpy = "^1.22.3"
+scipy = "^1.8.0"
+seaborn = "^0.11.2"
+torch = "^1.11.0"
+tensorflow = "^2.8.0"
+scikit-learn = "^0.24.2"
+mlfoundry-ui = "^0.1.4"
+shap = "^0.40.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
